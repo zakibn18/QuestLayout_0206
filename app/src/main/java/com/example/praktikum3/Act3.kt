@@ -1,5 +1,6 @@
 package com.example.praktikum3
 
+import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
@@ -22,7 +23,7 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 
 @Composable
-fun ActivitasPertama(modifore: Modifier) {
+fun ActivitasPertama(modifier: Modifier) {
     Column(
         modifier = Modifier.padding(top = 100.dp)
             .fillMaxSize(),
@@ -63,6 +64,17 @@ fun ActivitasPertama(modifore: Modifier) {
                     )
                 }
             }
+        }
+        Box(
+            modifier = Modifier
+                .fillMaxSize()
+        ) {
+            Text(
+                stringResource(id = R.string.copy),
+                modifier = Modifier
+                    .align(Alignment.BottomCenter)
+                    .padding(bottom = 50.dp)
+            )
         }
     }
 })
